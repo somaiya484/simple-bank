@@ -7,7 +7,10 @@ document.getElementById('btn-submit').addEventListener('click', function(){
     const passwordField = document.getElementById("enter-password");
     const password = passwordField.value;
 
+    //navigate to another page
     if(email === 'somaiya@gmail.com' && password === 'somaiya'){
         window.location.href = 'bank.html';
+    }else{
+        alert('your email or password is not matched.')
     }
 })
