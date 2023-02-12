@@ -1,32 +1,32 @@
-document.getElementById('btn-withdraw').addEventListener('click', function(){
-    const withdrawFiled = document.getElementById('withdraw-filed');
-    const newWithdrawAmountString = withdrawFiled.value;
-    const newWithdrawAmount = parseFloat(newWithdrawAmountString);
+// document.getElementById('btn-withdraw').addEventListener('click', function(){
+//     const withdrawFiled = document.getElementById('withdraw-filed');
+//     const newWithdrawAmountString = withdrawFiled.value;
+//     const newWithdrawAmount = parseFloat(newWithdrawAmountString);
 
-    const WithdrawTotalElement = document.getElementById('withdraw-total');
-    const previousWithdrawTotalString = WithdrawTotalElement.innerText;
-    const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
+//     const WithdrawTotalElement = document.getElementById('withdraw-total');
+//     const previousWithdrawTotalString = WithdrawTotalElement.innerText;
+//     const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
 
-    withdrawFiled.value = '';
-    
-    if(isNaN(newWithdrawAmount)){
-        alert('Please provide a number');
-        return;
-    }
+//     withdrawFiled.value = '';
 
-    const balanceTotalElement = document.getElementById('balance-total');
-    const previousBalanceTotalString = balanceTotalElement.innerText;
-    const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+//     if(isNaN(newWithdrawAmount)){
+//         alert('Please provide a number');
+//         return;
+//     }
 
-    if(newWithdrawAmount > previousBalanceTotal){
-        alert('bap er bank e ato taka nai');
-        return;
-    }
+//     const balanceTotalElement = document.getElementById('balance-total');
+//     const previousBalanceTotalString = balanceTotalElement.innerText;
+//     const previousBalanceTotal = parseFloat(previousBalanceTotalString);
 
-    const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-    WithdrawTotalElement.innerText = currentWithdrawTotal;
-    const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
+//     if(newWithdrawAmount > previousBalanceTotal){
+//         alert('bap er bank e ato taka nai');
+//         return;
+//     }
 
-    balanceTotalElement.innerText = newBalanceTotal
+//     const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
+//     WithdrawTotalElement.innerText = currentWithdrawTotal;
+//     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
 
-})
+//     balanceTotalElement.innerText = newBalanceTotal
+
+// })
