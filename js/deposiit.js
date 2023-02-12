@@ -21,3 +21,9 @@
 
 //     depositField.value = '';
 // })
+
+
+document.getElementById('btn-deposit').addEventListener('click', function(){
+    const depositField = document.getElementById('deposit-field');
+    const newDepositAmount = depositField.value;
+})
