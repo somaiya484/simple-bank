@@ -38,6 +38,12 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     depositTotal.innerText = currentDepositTotal;
 
     // add new deposit to previous deposit
+    const previousBalanceTotalElement = document.getElementById('balance-total');
+    const previousBalanceTotalString = previousBalanceTotalElement.innerText;
+    const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+
+    const currentBalanceTotal = previousBalanceTotal + newDepositAmount;
+    previousBalanceTotalElement.innerText = currentBalanceTotal
 
     depositField.value = '';
 })
