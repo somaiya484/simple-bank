@@ -25,15 +25,19 @@
 
 document.getElementById('btn-deposit').addEventListener('click', function(){
     const depositField = document.getElementById('deposit-field');
-    const newDepositAmount = depositField.value;
+    const newDepositAmountString = depositField.value;
+    const newDepositAmount = parseFloat(newDepositAmountString);
 
     // push in current deposit
     const depositTotal = document.getElementById('deposit-total');
-    const depositTotalElement = depositTotal.innerText;
+    const depositTotalElementString = depositTotal.innerText;
+    const depositTotalElement = parseFloat(depositTotalElementString);
     
     // added total deposit amount
     const currentDepositTotal = depositTotalElement + newDepositAmount;
     depositTotal.innerText = currentDepositTotal;
 
+    // add new deposit to previous deposit
 
+    depositField.value = '';
 })
