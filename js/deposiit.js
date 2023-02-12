@@ -26,4 +26,14 @@
 document.getElementById('btn-deposit').addEventListener('click', function(){
     const depositField = document.getElementById('deposit-field');
     const newDepositAmount = depositField.value;
+
+    // push in current deposit
+    const depositTotal = document.getElementById('deposit-total');
+    const depositTotalElement = depositTotal.innerText;
+    
+    // added total deposit amount
+    const currentDepositTotal = depositTotalElement + newDepositAmount;
+    depositTotal.innerText = currentDepositTotal;
+
+
 })
