@@ -30,3 +30,18 @@
 //     balanceTotalElement.innerText = newBalanceTotal
 
 // })
+
+
+
+
+
+
+
+
+document.getElementById('btn-withdraw').addEventListener('click', function(){
+    //get the input value from withdraw
+    const withdrawFiled = document.getElementById('withdraw-filed');
+    const withdrawFiledAmountString = withdrawFiled.value;
+    const withdrawFiledAmount = parseFloat(withdrawFiledAmountString);
+
+})
