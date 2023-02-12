@@ -39,9 +39,22 @@
 
 
 document.getElementById('btn-withdraw').addEventListener('click', function(){
-    //get the input value from withdraw
+    //get the input value from user
     const withdrawFiled = document.getElementById('withdraw-filed');
     const withdrawFiledAmountString = withdrawFiled.value;
     const withdrawFiledAmount = parseFloat(withdrawFiledAmountString);
+
+    //push the value into withdraw
+    const withdrawTotal = document.getElementById('withdraw-total');
+    const previousWithdrawTotalString = withdrawTotal.innerText;
+    const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
+
+    const currentWithdrawTotal = previousWithdrawTotal + withdrawFiledAmount;
+    withdrawTotal.innerText = currentWithdrawTotal;
+
+    // cut the value from total amount of balance;
+
+
+    withdrawFiled.value = '';
 
 })
