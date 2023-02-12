@@ -7,13 +7,17 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const previousWithdrawTotalString = WithdrawTotalElement.innerText;
     const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
 
+    withdrawFiled.value = '';
+    
+    if(isNaN(newWithdrawAmount)){
+        alert('Please provide a number');
+        return;
+    }
+
     const balanceTotalElement = document.getElementById('balance-total');
     const previousBalanceTotalString = balanceTotalElement.innerText;
     const previousBalanceTotal = parseFloat(previousBalanceTotalString);
 
-    
-    withdrawFiled.value = '';
-    
     if(newWithdrawAmount > previousBalanceTotal){
         alert('bap er bank e ato taka nai');
         return;
