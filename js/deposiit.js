@@ -5,7 +5,7 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
 
     const depositTotalElement = document.getElementById('deposit-total');
     const depositTotal = depositTotalElement.innerText;
-    console.log(depositTotal)
+    depositTotalElement.innerText = depositAmount;
 
 
 
